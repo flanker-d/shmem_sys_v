@@ -21,10 +21,13 @@ int main(int argc, char *argv[])
     return -1;
   }
 
-  for(int i = 0; i < SHMEM_SIZE; i=i+1024)
+  int i = 0;
+  for(i = 0; i < SHMEM_SIZE; i++)
   {
-    shmem_ptr[i] = 42;
+    shmem_ptr[i] = 0x2A;
   }
+
+  //while(1);
 
   return 0;
 }
